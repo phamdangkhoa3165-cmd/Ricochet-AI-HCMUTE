@@ -1,0 +1,1301 @@
+=== BÁO CÁO THUẬT TOÁN LẠNH ĐÔNG (SIMULATED ANNEALING) ===
+Quy tắc: Luôn chọn trạng thái tốt hơn (Delta < 0). Nếu tệ hơn, chấp nhận rủi ro dựa trên xác suất p = e^(-Delta/T).
+
+
+[Bước 1] T = 1000.00 | Đang đứng ở (6, 2) (h=10)
+ -> Lân cận ngẫu nhiên: (0, 2) (h=6)
+ -> Delta (E) = -4
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 2] T = 950.00 | Đang đứng ở (0, 2) (h=6)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = 2
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9979. Quay ngẫu nhiên r = 0.1751
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 3] T = 902.50 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9989. Quay ngẫu nhiên r = 0.0738
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 4] T = 857.38 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9850. Quay ngẫu nhiên r = 0.5347
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 5] T = 814.51 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 6] T = 773.78 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 7] T = 735.09 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9825. Quay ngẫu nhiên r = 0.6312
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 8] T = 698.34 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9986. Quay ngẫu nhiên r = 0.2703
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 9] T = 663.42 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 10] T = 630.25 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9984. Quay ngẫu nhiên r = 0.8251
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 11] T = 598.74 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 12] T = 568.80 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 13] T = 540.36 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9762. Quay ngẫu nhiên r = 0.2423
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 14] T = 513.34 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 15] T = 487.67 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9737. Quay ngẫu nhiên r = 0.4190
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 16] T = 463.29 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 17] T = 440.13 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9709. Quay ngẫu nhiên r = 0.1936
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 18] T = 418.12 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 19] T = 397.21 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9975. Quay ngẫu nhiên r = 0.5393
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 20] T = 377.35 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 21] T = 358.49 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9972. Quay ngẫu nhiên r = 0.2971
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 22] T = 340.56 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9625. Quay ngẫu nhiên r = 0.9333
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 23] T = 323.53 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 24] T = 307.36 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9968. Quay ngẫu nhiên r = 0.8935
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 25] T = 291.99 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 26] T = 277.39 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 27] T = 263.52 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9519. Quay ngẫu nhiên r = 0.1706
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 28] T = 250.34 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 29] T = 237.83 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9468. Quay ngẫu nhiên r = 0.8697
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 30] T = 225.94 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9956. Quay ngẫu nhiên r = 0.8950
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 31] T = 214.64 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 32] T = 203.91 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 33] T = 193.71 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9949. Quay ngẫu nhiên r = 0.4847
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 34] T = 184.03 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9318. Quay ngẫu nhiên r = 0.7642
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 35] T = 174.82 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 36] T = 166.08 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 37] T = 157.78 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9209. Quay ngẫu nhiên r = 0.5017
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 38] T = 149.89 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9934. Quay ngẫu nhiên r = 0.5804
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 39] T = 142.40 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 40] T = 135.28 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9926. Quay ngẫu nhiên r = 0.4850
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 41] T = 128.51 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 42] T = 122.09 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8990. Quay ngẫu nhiên r = 0.8721
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 43] T = 115.98 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 44] T = 110.18 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 45] T = 104.67 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9905. Quay ngẫu nhiên r = 0.3170
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 46] T = 99.44 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 47] T = 94.47 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9895. Quay ngẫu nhiên r = 0.1352
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 48] T = 89.74 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 49] T = 85.26 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8586. Quay ngẫu nhiên r = 0.7744
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 50] T = 80.99 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 51] T = 76.94 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9871. Quay ngẫu nhiên r = 0.5439
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 52] T = 73.10 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8371. Quay ngẫu nhiên r = 0.1935
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 53] T = 69.44 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 54] T = 65.97 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 55] T = 62.67 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9842. Quay ngẫu nhiên r = 0.7093
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 56] T = 59.54 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8038. Quay ngẫu nhiên r = 0.9765
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 57] T = 56.56 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.7947. Quay ngẫu nhiên r = 0.0886
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 58] T = 53.73 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 59] T = 51.05 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9806. Quay ngẫu nhiên r = 0.6004
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 60] T = 48.49 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 61] T = 46.07 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.7541. Quay ngẫu nhiên r = 0.2147
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 62] T = 43.77 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 63] T = 41.58 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.7315. Quay ngẫu nhiên r = 0.0666
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 64] T = 39.50 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 65] T = 37.52 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 66] T = 35.65 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9723. Quay ngẫu nhiên r = 0.1550
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 67] T = 33.87 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 68] T = 32.17 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.6676. Quay ngẫu nhiên r = 0.0480
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 69] T = 30.56 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9678. Quay ngẫu nhiên r = 0.1886
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 70] T = 29.04 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 71] T = 27.58 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.6242. Quay ngẫu nhiên r = 0.0605
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 72] T = 26.20 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 73] T = 24.89 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 74] T = 23.65 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9586. Quay ngẫu nhiên r = 0.0496
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 75] T = 22.47 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.5607. Quay ngẫu nhiên r = 0.6778
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 76] T = 21.34 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 77] T = 20.28 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9519. Quay ngẫu nhiên r = 0.7905
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 78] T = 19.26 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.5092. Quay ngẫu nhiên r = 0.1529
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 79] T = 18.30 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 80] T = 17.38 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 81] T = 16.52 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9412. Quay ngẫu nhiên r = 0.4735
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 82] T = 15.69 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 83] T = 14.91 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9351. Quay ngẫu nhiên r = 0.5204
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 84] T = 14.16 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.3993. Quay ngẫu nhiên r = 0.1550
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 85] T = 13.45 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 86] T = 12.78 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9247. Quay ngẫu nhiên r = 0.7490
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 87] T = 12.14 | Đang đứng ở (15, 15) (h=22)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 88] T = 11.53 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 89] T = 10.96 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9128. Quay ngẫu nhiên r = 0.6157
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 90] T = 10.41 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 91] T = 9.89 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.9038. Quay ngẫu nhiên r = 0.7212
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 92] T = 9.39 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 93] T = 8.92 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.2330. Quay ngẫu nhiên r = 0.7999
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 94] T = 8.48 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8887. Quay ngẫu nhiên r = 0.9440
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 95] T = 8.05 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1991. Quay ngẫu nhiên r = 0.7812
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 96] T = 7.65 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1829. Quay ngẫu nhiên r = 0.1757
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 97] T = 7.27 | Đang đứng ở (15, 0) (h=21)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -13
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 98] T = 6.91 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1522. Quay ngẫu nhiên r = 0.9324
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 99] T = 6.56 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1378. Quay ngẫu nhiên r = 0.8805
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 100] T = 6.23 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8518. Quay ngẫu nhiên r = 0.2469
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 101] T = 5.92 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 102] T = 5.62 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0991. Quay ngẫu nhiên r = 0.3209
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 103] T = 5.34 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.8293. Quay ngẫu nhiên r = 0.5856
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 104] T = 5.08 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0772. Quay ngẫu nhiên r = 0.7170
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 105] T = 4.82 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0675. Quay ngẫu nhiên r = 0.1257
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 106] T = 4.58 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0586. Quay ngẫu nhiên r = 0.2803
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 107] T = 4.35 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 108] T = 4.13 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.7852. Quay ngẫu nhiên r = 0.6134
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 109] T = 3.93 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0365. Quay ngẫu nhiên r = 0.3592
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 110] T = 3.73 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0307. Quay ngẫu nhiên r = 0.3209
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 111] T = 3.54 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0255. Quay ngẫu nhiên r = 0.5539
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 112] T = 3.37 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 113] T = 3.20 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.7316. Quay ngẫu nhiên r = 0.4499
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 114] T = 3.04 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 115] T = 2.89 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0111. Quay ngẫu nhiên r = 0.1536
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 116] T = 2.74 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.6945. Quay ngẫu nhiên r = 0.8487
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 117] T = 2.61 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.6813. Quay ngẫu nhiên r = 0.5719
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 118] T = 2.48 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0052. Quay ngẫu nhiên r = 0.2293
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 119] T = 2.35 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0040. Quay ngẫu nhiên r = 0.5210
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 120] T = 2.23 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 121] T = 2.12 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.6243. Quay ngẫu nhiên r = 0.1849
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 122] T = 2.02 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0016. Quay ngẫu nhiên r = 0.8916
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 123] T = 1.92 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 124] T = 1.82 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.5772. Quay ngẫu nhiên r = 0.4510
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 125] T = 1.73 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0005. Quay ngẫu nhiên r = 0.3494
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 126] T = 1.64 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0004. Quay ngẫu nhiên r = 0.6454
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 127] T = 1.56 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (15, 15) (h=22)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0002. Quay ngẫu nhiên r = 0.5418
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 128] T = 1.48 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 129] T = 1.41 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0001. Quay ngẫu nhiên r = 0.9643
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 130] T = 1.34 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0001. Quay ngẫu nhiên r = 0.9803
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 131] T = 1.27 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.4552. Quay ngẫu nhiên r = 0.8298
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 132] T = 1.21 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2559
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 133] T = 1.15 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8209
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 134] T = 1.09 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.3994. Quay ngẫu nhiên r = 0.6518
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 135] T = 1.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7441
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 136] T = 0.98 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.3617. Quay ngẫu nhiên r = 0.8031
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 137] T = 0.93 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7070
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 138] T = 0.89 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.3241. Quay ngẫu nhiên r = 0.3210
+ -> R < p => VƯỢT RÀO THÀNH CÔNG. Chấp nhận rủi ro di chuyển!
+
+[Bước 139] T = 0.84 | Đang đứng ở (0, 15) (h=9)
+ -> Lân cận ngẫu nhiên: (0, 0) (h=8)
+ -> Delta (E) = -1
+ -> Đánh giá: Delta < 0 (Tốt hơn) => CHẤP NHẬN DI CHUYỂN.
+
+[Bước 140] T = 0.80 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2024
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 141] T = 0.76 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.1002
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 142] T = 0.72 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.2507. Quay ngẫu nhiên r = 0.3099
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 143] T = 0.69 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.2331. Quay ngẫu nhiên r = 0.7597
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 144] T = 0.65 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.2159. Quay ngẫu nhiên r = 0.6081
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 145] T = 0.62 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1992. Quay ngẫu nhiên r = 0.8613
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 146] T = 0.59 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1829. Quay ngẫu nhiên r = 0.7612
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 147] T = 0.56 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2411
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 148] T = 0.53 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6655
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 149] T = 0.50 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0683
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 150] T = 0.48 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1243. Quay ngẫu nhiên r = 0.1844
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 151] T = 0.46 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.1113. Quay ngẫu nhiên r = 0.9033
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 152] T = 0.43 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.1521
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 153] T = 0.41 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7493
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 154] T = 0.39 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5437
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 155] T = 0.37 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.1238
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 156] T = 0.35 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0586. Quay ngẫu nhiên r = 0.6376
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 157] T = 0.33 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0505. Quay ngẫu nhiên r = 0.3080
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 158] T = 0.32 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0431. Quay ngẫu nhiên r = 0.5414
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 159] T = 0.30 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0366. Quay ngẫu nhiên r = 0.0552
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 160] T = 0.29 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7886
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 161] T = 0.27 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.9941
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 162] T = 0.26 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0211. Quay ngẫu nhiên r = 0.9035
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 163] T = 0.25 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0172. Quay ngẫu nhiên r = 0.8651
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 164] T = 0.23 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0139. Quay ngẫu nhiên r = 0.4179
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 165] T = 0.22 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0111. Quay ngẫu nhiên r = 0.9454
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 166] T = 0.21 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4372
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 167] T = 0.20 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0609
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 168] T = 0.19 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0793
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 169] T = 0.18 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5789
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 170] T = 0.17 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7269
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 171] T = 0.16 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.1592
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 172] T = 0.16 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4586
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 173] T = 0.15 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6034
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 174] T = 0.14 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0008. Quay ngẫu nhiên r = 0.8502
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 175] T = 0.13 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0005. Quay ngẫu nhiên r = 0.2699
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 176] T = 0.13 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0004. Quay ngẫu nhiên r = 0.7532
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 177] T = 0.12 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0002. Quay ngẫu nhiên r = 0.1411
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 178] T = 0.11 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.3712
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 179] T = 0.11 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0001. Quay ngẫu nhiên r = 0.2739
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 180] T = 0.10 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0001. Quay ngẫu nhiên r = 0.0215
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 181] T = 0.10 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4045
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 182] T = 0.09 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6447
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 183] T = 0.09 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.1064
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 184] T = 0.08 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0231
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 185] T = 0.08 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6490
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 186] T = 0.08 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6942
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 187] T = 0.07 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8158
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 188] T = 0.07 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2447
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 189] T = 0.06 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5362
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 190] T = 0.06 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5555
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 191] T = 0.06 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8493
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 192] T = 0.06 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.3108
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 193] T = 0.05 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.9861
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 194] T = 0.05 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8063
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 195] T = 0.05 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5063
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 196] T = 0.05 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5252
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 197] T = 0.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8478
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 198] T = 0.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5537
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 199] T = 0.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.3190
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 200] T = 0.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.3764
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 201] T = 0.04 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2268
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 202] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0468
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 203] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0249
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 204] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2135
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 205] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8337
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 206] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5699
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 207] T = 0.03 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4817
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 208] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8971
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 209] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6037
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 210] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4574
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 211] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2398
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 212] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.9765
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 213] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2636
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 214] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7111
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 215] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.4286
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 216] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6814
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 217] T = 0.02 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.9646
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 218] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0500
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 219] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.7561
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 220] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.6810
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 221] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.3202
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 222] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.5863
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 223] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.0372
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 224] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (15, 0) (h=21)
+ -> Delta (E) = 13
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.8300
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+[Bước 225] T = 0.01 | Đang đứng ở (0, 0) (h=8)
+ -> Lân cận ngẫu nhiên: (0, 15) (h=9)
+ -> Delta (E) = 1
+ -> Đánh giá: Delta >= 0 (Tệ hơn). Xác suất rủi ro p = 0.0000. Quay ngẫu nhiên r = 0.2681
+ -> R >= p => TỪ CHỐI RỦI RO. Giữ nguyên vị trí.
+
+=> [KẾT THÚC] Nhiệt độ đã đóng băng (T <= 0.01). Dừng thuật toán tại (0, 0).

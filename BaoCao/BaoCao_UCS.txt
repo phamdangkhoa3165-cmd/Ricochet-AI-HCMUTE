@@ -1,0 +1,29 @@
+=== BÁO CÁO CHI TIẾT THUẬT TOÁN UCS ===
+Trạng thái xuất phát: (0, 14)
+Mục tiêu (Goal): (11, 7)
+
+Bước 1: Xét nút (0, 14) | Tổng chi phí g(n) = 0
+  + Lân cận (0, 0) mới -> Thêm vào Frontier với g=1.
+  + Lân cận (10, 14) mới -> Thêm vào Frontier với g=1.
+  + Lân cận (0, 15) mới -> Thêm vào Frontier với g=1.
+Bước 2: Xét nút (0, 0) | Tổng chi phí g(n) = 1
+  + Lân cận (15, 0) mới -> Thêm vào Frontier với g=2.
+Bước 3: Xét nút (10, 14) | Tổng chi phí g(n) = 1
+  + Lân cận (10, 10) mới -> Thêm vào Frontier với g=2.
+  + Lân cận (10, 15) mới -> Thêm vào Frontier với g=2.
+Bước 4: Xét nút (0, 15) | Tổng chi phí g(n) = 1
+  + Lân cận (15, 15) mới -> Thêm vào Frontier với g=2.
+Bước 5: Xét nút (15, 0) | Tổng chi phí g(n) = 2
+Bước 6: Xét nút (10, 10) | Tổng chi phí g(n) = 2
+  + Lân cận (11, 10) mới -> Thêm vào Frontier với g=3.
+Bước 7: Xét nút (10, 15) | Tổng chi phí g(n) = 2
+Bước 8: Xét nút (15, 15) | Tổng chi phí g(n) = 2
+Bước 9: Xét nút (11, 10) | Tổng chi phí g(n) = 3
+  + Lân cận (11, 11) mới -> Thêm vào Frontier với g=4.
+  + Lân cận (11, 7) mới -> Thêm vào Frontier với g=4.
+Bước 10: Xét nút (11, 11) | Tổng chi phí g(n) = 4
+  + Lân cận (6, 11) mới -> Thêm vào Frontier với g=5.
+  + Lân cận (15, 11) mới -> Thêm vào Frontier với g=5.
+Bước 11: Xét nút (11, 7) | Tổng chi phí g(n) = 4
+
+=> [THÀNH CÔNG] Đã đạt đích (11, 7) với tổng chi phí tối ưu g=4. Số nút đã duyệt: 11

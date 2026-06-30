@@ -1,0 +1,10 @@
+=== BÁO CÁO CHI TIẾT THUẬT TOÁN LEO ĐỒI (SIMPLE HC) ===
+Trạng thái xuất phát: (11, 3)
+Mục tiêu (Goal): (10, 11)
+
+
+Bước 1: Đang ở (11, 3) (h = 9)
+  => Lân cận (11, 12) có h=2 tốt hơn. Chọn đi luôn (First-choice)!
+
+Bước 2: Đang ở (11, 12) (h = 2)
+  => Bế tắc tại cực đại cục bộ (11, 12). Không có lân cận nào tốt hơn 2.
